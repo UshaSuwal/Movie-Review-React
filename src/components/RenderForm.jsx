@@ -9,7 +9,10 @@ export function RenderForm({id}) {
   }
 
   return (
-    <form className="mt-12 flex items-center space-y-2 py-2 rounded shadow-md w-full ">
+    <>
+    <p className="text-2xl font-bold text-red-600" style={{ fontFamily: "Cinzel, serif" }}>Reviews:</p>
+    <form className="mt-2 flex items-center space-y-2 py-2 rounded shadow-md w-full ">
+        
       <div className="mr-5">
       <textarea
         placeholder="Review..."
@@ -20,5 +23,6 @@ export function RenderForm({id}) {
       </div>
       <PostForm id={id} review={review}  setReview={setReview} />
     </form>
+    </>
   );
 }

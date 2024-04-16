@@ -10,12 +10,12 @@ export function DisplayReview({ id }) {
   }, [id]);
 
   return (
-    <div className="mt-[5rem] ">
-        <p className="text-2xl font-bold text-red-600">Reviews:</p>
-      <p>Total review: {movie.review_count}</p>
+    <div >
+        
+      <p className="mb-5"><span className="text-xl text-red-600">Total review: </span>{movie.review_count}</p>
       
         {movie.reviews?.map((review, index) => (
-          <p key={index}>{review.description}</p>
+          <p key={index} className="bg-gray-600 p-1 pl-2 rounded-lg mb-2">{review.description}</p>
         ))}
       
     </div>
