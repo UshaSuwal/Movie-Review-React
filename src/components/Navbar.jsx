@@ -6,6 +6,7 @@ export function Navbar(){
           <span className="text-5xl font-bold text-red-500 ml-10" style={{ fontFamily: 'Cinzel, serif' }}>Movie<span className="text-gray-200">Review <i class="fa-solid fa-clapperboard text-3xl"></i></span> </span>
         </div>
       </nav>
+
     
     )
 }

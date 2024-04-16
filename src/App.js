@@ -7,7 +7,7 @@ import { FetchApi } from "./components/FetchApi";
 
 function App() {
   return (
-    <div className="bg-gray-600">
+    <div className="bg-gray-600 pt-2">
       <Navbar/>
       <FetchApi />
     </div>
