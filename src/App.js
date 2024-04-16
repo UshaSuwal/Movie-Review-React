@@ -1,13 +1,15 @@
 import "./App.css";
 import { Navbar } from "./components/Navbar";
-import { Form } from "./components/Form";
+
+import { FetchApi } from "./components/FetchApi";
+
 
 
 function App() {
   return (
-    <div>
+    <div className="bg-gray-600">
       <Navbar/>
-      <Form />
+      <FetchApi />
     </div>
   );
 }
