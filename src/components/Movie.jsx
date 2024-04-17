@@ -133,6 +133,8 @@ export function Movie({ movie }) {
             </div>
           </div>
           <hr className="m-10"></hr>
+
+          
           <p className="mb-5 text-gray-300">
             <span className="text-xl text-red-600">Total review: </span>
             {reviews?.length}
