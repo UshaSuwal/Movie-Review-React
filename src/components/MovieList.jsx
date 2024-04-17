@@ -13,7 +13,10 @@ export function MovieList() {
 
   return (
     <>
-      <Movie movies={movies} />
+        {movies?.map((movie) => 
+            <Movie movie={movie} key={movie.id} />
+        )}
     </>
+    
   );
 }
