@@ -11,7 +11,7 @@ export function Movie({ movie }) {
     }
   }, [movie]);
 
-  function reviewAdded(e, reviewText) {
+  function reviewAdded(e, reviewText, setComment) {
     e.preventDefault();
     const body = {
       review: {
@@ -35,7 +35,7 @@ export function Movie({ movie }) {
             description: reviewText,
           },
         ]);
-
+        setComment("")
       }
     });
   }

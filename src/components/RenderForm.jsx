@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export function RenderForm({reviewAdded}) {
-  const [review, setReview] = useState("");
+  const [comment, setComment] = useState("");
 
   return (
     <>
@@ -11,17 +11,19 @@ export function RenderForm({reviewAdded}) {
       <div className="mr-5">
       <textarea
         placeholder="Review..."
-        value={review}
-        onChange={(e) =>setReview(e.target.value)}
+        value={comment}
+        onChange={(e) =>setComment(e.target.value)}
         className="w-full mr-28 p-2 border-black rounded focus:outline-none focus:border-blue-500 text-white bg-gray-700"
       />
       </div>
+
       <button
       className="button bg-red-700 hover:bg-red-600 px-4 py-2 border-black rounded-lg"
-      onClick={(e) => reviewAdded(e, review)}
+      onClick={(e) => reviewAdded(e, comment, setComment)}
       >
         Save
       </button>
+
     </form>
     </>
   );
