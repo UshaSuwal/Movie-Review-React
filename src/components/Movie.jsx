@@ -1,16 +1,8 @@
-import React, { useEffect, useState } from "react";
 import { RenderForm } from "./RenderForm";
 import { DisplayReview } from "./DisplayReview";
 
-export function FetchApi() {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/api/v1/movies/all/movie_reviews")
-      .then((response) => response.json())
-      .then((data) => setMovies(data));
-  }, []);
-
+export function Movie({movies}) {
+  
   return (
     <>
       <div className="mt-[5rem] mx-10">
@@ -105,7 +97,7 @@ export function FetchApi() {
 
             <div className="ml-10 flex">
               <div className="w-[36%] ">
-                <DisplayReview id={movie.mid} />
+                <DisplayReview reviews={movie.reviews} />
               </div>
 
               <div className=" ml-32">

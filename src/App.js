@@ -1,7 +1,6 @@
 import "./App.css";
 import { Navbar } from "./components/Navbar";
-
-import { FetchApi } from "./components/FetchApi";
+import { MovieList } from "./components/MovieList";
 
 
 
@@ -9,7 +8,7 @@ function App() {
   return (
     <div className="bg-gray-600 pt-2">
       <Navbar/>
-      <FetchApi />
+      <MovieList />
     </div>
   );
 }

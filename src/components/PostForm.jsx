@@ -1,5 +1,7 @@
+import { useState } from "react";
 
-export function PostForm({ id, review, setReview }) {
+export function PostForm({ id, review }) {
+  const [comment, setcomment]= useState([]);
   function postapi() {
     const body = {
       review: {
@@ -17,17 +19,25 @@ export function PostForm({ id, review, setReview }) {
       cache: "default",
     }).then((response) => {
       if (response.ok) {
-        setReview("");
+        setcomment(...comment, review);
+
+        console.log(comment)
       }
     });
   }
 
   return (
+    <>
     <button
       className="button bg-red-700 hover:bg-red-600 px-4 py-2 border-black rounded-lg"
       onClick={postapi}
     >
       Save
     </button>
+
+    <h1>{comment.map(comm=>
+    <h1 className="text-white">{comm}</h1>
+    )}</h1>
+    </>
   );
 }
